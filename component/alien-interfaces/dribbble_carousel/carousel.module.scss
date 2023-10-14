@@ -1,0 +1,23 @@
+.carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    width: 375px;
+    height: 800px;
+    transition: transform 0.5s ease; /* Smooth transition for sliding animation */
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%; /* Each item takes up the full width of the container */
+    min-width: 100%; /* Minimum width to ensure one item per screen */
+    padding: 1rem; /* Add spacing between items */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    text-align: center; /* Center content horizontally */
+    background-color: #f0f0f0; /* Add a background color or other styles as needed */
+  }
+  
+  /* Highlight the active item */
+  .carousel-item.active {
+    background-color: #ddd;
+    /* Add other styling for the active item as desired */
+  }
