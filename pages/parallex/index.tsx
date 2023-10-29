@@ -1,4 +1,4 @@
-import React,{useState, useEffect, useRef} from 'react';
+import React,{useState, useEffect, useRef, useLayoutEffect} from 'react';
 import RootLayout from '../layout';
 import type { ReactElement } from 'react'
 import { NextPageWithLayout } from '../_app';
@@ -15,7 +15,7 @@ const Parallex: NextPageWithLayout = () => {
   let yValue = 0;
   let rotateDeg = 0;
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     update(0);
     let ctx = gsap.context(() => {
       animate()

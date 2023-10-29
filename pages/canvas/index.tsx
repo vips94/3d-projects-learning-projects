@@ -1,11 +1,13 @@
 
-'use client';
+// 'use client'
 import React,{useState, useEffect, useRef} from 'react';
 import RootLayout from '../layout';
 import type { ReactElement } from 'react'
 import styles from './canvas.module.scss';
 import {gsap} from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import LocomotiveScroll from 'locomotive-scroll';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Canvas = () => {
@@ -486,7 +488,7 @@ const Canvas = () => {
 
 Canvas.getLayout = function getLayout(page: ReactElement) {
     return (
-      <RootLayout>
+      <RootLayout data-scroll-container>
         {page}
       </RootLayout>
     )
